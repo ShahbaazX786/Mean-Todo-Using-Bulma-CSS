@@ -2,9 +2,10 @@ const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
 const mongoose = require('./db/mongoose');
-
+const cors=require('cors');
 //loading middleware
 app.use(bodyParser.json());
+app.use(cors());
 
 //importing models
 
