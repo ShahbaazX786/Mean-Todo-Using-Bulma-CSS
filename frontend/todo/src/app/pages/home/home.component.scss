@@ -5,6 +5,7 @@
   text-transform: uppercase;
   letter-spacing: 1px;
 }
+
 .centered-content {
   display: flex;
   justify-content: center;
@@ -12,13 +13,12 @@
   width: 100%;
   height: 100%;
 }
-
 .tm-container {
   display: flex;
   width: 100%;
   height: 100%;
-  max-width: 1080px;
-  max-height: 640px;
+  max-width: 1000px;
+  max-height: 500px;
 }
 
 .sidebar {

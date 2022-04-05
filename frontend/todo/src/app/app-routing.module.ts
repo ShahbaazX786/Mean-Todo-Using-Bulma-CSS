@@ -1,3 +1,4 @@
+import { NewlistsComponent } from './pages/newlists/newlists.component';
 import { FaqsComponent } from './pages/faqs/faqs.component';
 import { LoginComponent } from './pages/login/login.component';
 import { SignupComponent } from './pages/signup/signup.component';
@@ -11,6 +12,7 @@ import { RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {path:'', component: HomeComponent },
   {path:'home', component: HomeComponent },
+  {path:'newlists', component: NewlistsComponent},
   {path:'howto', component: HowToComponent },
   {path:'about', component: AboutComponent },
   {path:'contact', component: ContactComponent },
