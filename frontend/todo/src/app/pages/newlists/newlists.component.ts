@@ -1,3 +1,4 @@
+import { TaskService } from './../../services/task.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NewlistsComponent implements OnInit {
 
-  constructor() { }
+  constructor(private taskService:TaskService) { }
 
   ngOnInit(): void {
+  }
+
+  createNewList(title:string){
+    this.taskService.createNewList(title).subscribe((res:any)=>{
+      console.log(res);
+    });
   }
 
 }

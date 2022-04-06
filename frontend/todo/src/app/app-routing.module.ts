@@ -10,8 +10,10 @@ import { NgModule, Component } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-  {path:'', component: HomeComponent },
+  {path:'', redirectTo: 'lists', pathMatch:'full'},
   {path:'home', component: HomeComponent },
+  {path:'lists', component: HomeComponent },
+  {path:'lists/:listId', component: HomeComponent },
   {path:'newlists', component: NewlistsComponent},
   {path:'howto', component: HowToComponent },
   {path:'about', component: AboutComponent },
