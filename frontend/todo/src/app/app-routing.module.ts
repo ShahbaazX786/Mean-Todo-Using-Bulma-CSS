@@ -1,3 +1,4 @@
+import { NewtasksComponent } from './pages/newtasks/newtasks.component';
 import { NewlistsComponent } from './pages/newlists/newlists.component';
 import { FaqsComponent } from './pages/faqs/faqs.component';
 import { LoginComponent } from './pages/login/login.component';
@@ -15,6 +16,8 @@ const routes: Routes = [
   {path:'lists', component: HomeComponent },
   {path:'lists/:listId', component: HomeComponent },
   {path:'newlists', component: NewlistsComponent},
+  {path:'newtasks', component: NewtasksComponent},
+  {path:'lists/:listId/newtasks', component: NewtasksComponent},
   {path:'howto', component: HowToComponent },
   {path:'about', component: AboutComponent },
   {path:'contact', component: ContactComponent },

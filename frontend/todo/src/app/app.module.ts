@@ -13,6 +13,7 @@ import { FaqsComponent } from './pages/faqs/faqs.component';
 import { SignupComponent } from './pages/signup/signup.component';
 import { LoginComponent } from './pages/login/login.component';
 import { NewlistsComponent } from './pages/newlists/newlists.component';
+import { NewtasksComponent } from './pages/newtasks/newtasks.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { NewlistsComponent } from './pages/newlists/newlists.component';
     SignupComponent,
     LoginComponent,
     NewlistsComponent,
+    NewtasksComponent,
   ],
   imports: [
     BrowserModule,
