@@ -1,4 +1,5 @@
 @import '../../../main-styles.scss';
+
 .title {
   font-family: 'Lato';
   font-size: 24px;
@@ -74,10 +75,11 @@
   margin-top: 10px;
 
   &:not(.complete) {
-    cursor: pointer;
-    transition: box-shadow 0.2s ease,transform 0.2s ease;
 
-    &.active {
+    cursor: pointer;
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+
+    &:active {
       transform:scale(0.95);
     }
 
