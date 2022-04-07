@@ -1,7 +1,6 @@
 import { TaskService } from './../../services/task.service';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
-import { threadId } from 'worker_threads';
 
 @Component({
   selector: 'app-home',
@@ -17,7 +16,7 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void{
     this.route.params.subscribe((params:Params)=>{
       console.log(params);
-      this.taskService.getTasks(params.listId).subscribe((tasks:any)=>{
+      this.taskService.getTasks(params['listId']).subscribe((tasks:any)=>{
         this.tasks=tasks;
       })
     }
