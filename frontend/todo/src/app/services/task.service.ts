@@ -6,21 +6,21 @@ import { WebreqService } from './webreq.service';
 })
 export class TaskService {
 
-  constructor(private WebReqService:WebreqService) { }
+  constructor(private webReqService:WebreqService) { }
 
   getLists(){
-    return this.WebReqService.get('lists');
+    return this.webReqService.get('lists');
   }
 
   createNewList(title:string){
-    return this.WebReqService.post('lists',{title});
+    return this.webReqService.post('lists',{title});
   }
 
   getTasks(listId:string){
-    return this.WebReqService.get(`lists/${listId}/tasks`);
+    return this.webReqService.get(`lists/${listId}/tasks`);
   }
 
   createNewTask(title:string , listId:string){
-    return this.WebReqService.post(`lists/${listId}/tasks`,{title});
+    return this.webReqService.post(`lists/${listId}/tasks`,{title});
   }
 }

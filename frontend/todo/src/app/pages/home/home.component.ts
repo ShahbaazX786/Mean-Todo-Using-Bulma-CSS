@@ -7,28 +7,18 @@ import { ActivatedRoute, Params } from '@angular/router';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
+/*export class HomeComponent implements OnInit {
+}*/
 export class HomeComponent implements OnInit {
 
-  lists: any;
-  tasks: any;
+  constructor(private taskService:TaskService, private route:ActivatedRoute) { }
 
-  constructor(private taskService:TaskService,private route:ActivatedRoute) { }
-
-  ngOnInit(): void {
-    this.route.params.subscribe(
-      (params:Params)=>{
-        console.log(params);
-        this.taskService.getTasks(params['listId']).subscribe((tasks:any)=>{
-          this.tasks=tasks;
-        })
-      }
-
-    )
-
-    this.taskService.getLists().subscribe((lists:any)=>{
-      this.lists=lists;
-    })
-
+  ngOnInit(): void{
   }
 
+  createNewList(){
+    this.taskService.createNewList('Testing').subscribe((response: any)=>{
+
+    });
+  }
 }
