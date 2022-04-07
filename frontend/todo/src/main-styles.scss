@@ -15,7 +15,7 @@ $light: #f8f8f8;
 $family-sans-serif: "Nunito",sans-serif;
 $primary: $green;
 
-$link: $turquoise;
+$link: $light-green;
 
 
 // Update some of Bulma's component variables
@@ -30,7 +30,6 @@ html {
   background: linear-gradient(to right top, $turquoise, $green);
 }
 
-html,
-body {
+html, body {
   height: 100%;
 }
