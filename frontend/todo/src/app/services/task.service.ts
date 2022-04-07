@@ -1,5 +1,5 @@
-import { WebreqService } from './webreq.service';
 import { Injectable } from '@angular/core';
+import { WebreqService } from './webreq.service';
 
 @Injectable({
   providedIn: 'root'
