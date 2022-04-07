@@ -1,0 +1,8 @@
+After 
+part-1 good
+part-2 good
+part-3 good
+part-4 good
+part-5 must check this again.(getting some error in index.js itseems to be.)
+part-6 good
+part-7 hmm(Models seems to be creating issues in newlist.ts file but using (list:any) seems to be working aon)
