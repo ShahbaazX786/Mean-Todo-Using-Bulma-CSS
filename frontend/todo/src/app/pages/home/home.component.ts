@@ -1,3 +1,5 @@
+import { List } from './../../models/list.model';
+import { Task } from './../../models/task.model';
 import { TaskService } from './../../services/task.service';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
@@ -9,8 +11,8 @@ import { ActivatedRoute, Params } from '@angular/router';
 })
 export class HomeComponent implements OnInit {
 
-  lists: any[]=[];
-  tasks: any[]=[];
+  lists: List[]=[];
+  tasks: Task[]=[];
   constructor(private taskService:TaskService, private route:ActivatedRoute) { }
 
   ngOnInit(): void{
@@ -26,8 +28,15 @@ export class HomeComponent implements OnInit {
       //console.log(lists);
       this.lists = lists;
     })
+
   }
 
+  ontaskclick(task:Task){
+    this.taskService.complete(task).subscribe(()=>{
+      console.log("Completed Successfully");
+      task.completed=!task.completed;
+    })
+  }
   /*createNewList(){
     this.taskService.createNewList('Testing').subscribe((response: any)=>{
 

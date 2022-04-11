@@ -20,7 +20,8 @@
       <h1 class="title has-text-primary ">
         Tasks
       </h1>
-      <div class="task" *ngFor="let task of tasks">
+
+      <div class="task" *ngFor="let task of tasks" (click)="ontaskclick(task)" [ngClass]="{'completed':task.completed}">
         <p>{{task.title}}</p>
       </div>
 
